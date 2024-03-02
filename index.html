@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ff{
+            display: none;
+        }
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <span id="spre" class="ff">succed accound</span>
+    <span class="ff" id="ads">fillup all</span><br><br>
+    <input id="inp1" placeholder="number" type="text"><br><br>
+    <input id="inp2" placeholder="password" type="password"><br><br>
+    <span class="ff" id="add1">Plz make same password</span><br>
+    <input id="inp3" placeholder="re-password" type="password"><br><br>
+    <button onclick="kjhkh()">Creat Accound</button><br><br>
+
+  
+
+
+    <br><br>
+    <span class="ff" id="spqq">incorrect number or password</span><br>
+    <span class="ff" id="spoo">succed login</span><br>
+    <input id="inp4" placeholder="number" type="text"><br><br>
+    <input id="inp5" placeholder="password" type="password"><br><br>
+    <button onclick="lginn()" id="log">Login</button>
+    <script>
+        
+        function kjhkh(){
+            let x = document.getElementById('inp1');
+            let y = document.getElementById('inp2');
+            let o = document.getElementById('inp3'); 
+            let z = document.getElementById('ads');
+            let p = document.getElementById('add1');
+            let dv = document.getElementById('spre');
+           
+
+            if(x.value==''|| y.value==''){
+                z.classList.remove('ff')
+            }else{
+                z.classList.add('ff')
+            };
+
+            if(y.value==o.value){
+                localStorage.number=x.value;
+                localStorage.Password=y.value;
+                p.classList.add('ff')
+                dv.classList.remove('ff')
+               
+
+            }else{
+                p.classList.remove('ff')
+                dv.classList.add('ff')
+                
+
+            };
+
+        };
+        function lginn(){
+            let num = localStorage.number;
+            let pass = localStorage.Password;
+            let numIp = document.getElementById('inp4');
+            let inppass = document.getElementById('inp5');
+            let ppp = document.getElementById('spoo');
+            let pppr = document.getElementById('spqq');
+            if(numIp.value==num || inppass.value==pass){
+                ppp.classList.remove('ff')
+                pppr.classList.add('ff')
+            }else{
+                
+                pppr.classList.remove('ff')
+                ppp.classList.add('ff')
+                
+
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
