@@ -42,7 +42,7 @@
             let dv = document.getElementById('spre');
            
 
-            if(x.value==''|| y.value==''){
+            if(x.value==''&& y.value==''){
                 z.classList.remove('ff')
             }else{
                 z.classList.add('ff')
@@ -70,7 +70,7 @@
             let inppass = document.getElementById('inp5');
             let ppp = document.getElementById('spoo');
             let pppr = document.getElementById('spqq');
-            if(numIp.value==num || inppass.value==pass){
+            if(numIp.value==num && inppass.value==pass){
                 ppp.classList.remove('ff')
                 pppr.classList.add('ff')
             }else{
